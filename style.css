@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/*                Main Section               */
+.main-section {
+  width: 60%;
+  /*background-image: url(/images/7\ Social\ Media.svg);*/
+  background-image: url("mainbg.png");
+
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: 900px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.main-text {
+  width: 400px;
+  line-height: 25px;
+}
+
+.slogan {
+  font-weight: 800;
+  padding: 20px 50px;
+  text-shadow: 1px 1px 1px #fff;
+  line-height: 30px;
+}
+
+.main-text p {
+  padding: 0 50px;
+}
+
+/*            Login Section             */
+.login-section {
+  position: relative;
+  width: 40%;
+}
+
+.form-container {
+  color: aliceblue;
+  position: absolute;
+  height: 520px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(140deg, #3216cf, #ff416c);
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+}
+
+.btnlogin {
+  text-align: center;
+  font-weight: lighter;
+  display: block;
+  margin: 80px auto 0 auto;
+  width: 130px;
+  font-size: 28px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.55s ease-in;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 20px 90px 20px;
+}
+
+.login-container input[name="username"],
+input[name="password"] {
+  display: block;
+  font-size: 16px;
+  padding: 15px;
+  color: aliceblue;
+  background: none;
+  margin: 15px auto;
+  width: 80%;
+  border: none;
+  border-bottom: 0.5px solid rgba(194, 178, 178, 0.4);
+}
+
+input[name="username"]::placeholder,
+input[name="password"]::placeholder {
+  color: #fff;
+  opacity: 0.5;
+  font-weight: lighter;
+}
+
+.login-container input[type="text"]:focus {
+  outline: none;
+}
+.login-container input[type="password"]:focus {
+  outline: none;
+}
+
+.login-container button {
+  display: block;
+  border-radius: 111px;
+  border: 1px solid;
+  text-align: center;
+  width: 100px;
+  padding: 10px 20px;
+  margin: 60px auto 10px auto;
+  background: none;
+  color: white;
+}
+
+.login-container a {
+  font-size: 12px;
+  text-align: center;
+}
+
+.error1,
+.error2 {
+  font-size: 10px;
+  font-weight: lighter;
+  font-style: italic;
+  padding-left: 25px;
+  color: rgb(247, 115, 115);
+  opacity: 0;
+}
+
+.signup-container {
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 450px;
+  left: -150px;
+  border-radius: 50%;
+  opacity: 0.7;
+  width: 200%;
+  padding: 30px 20px 90px 20px;
+  transition: all 0.5s ease-out;
+}
+
+.signup-container input[name="reg-username"],
+input[name="reg-password"],
+input[name="firstName"] {
+  display: block;
+  font-size: 16px;
+  padding: 15px;
+  color: #3216cf;
+  background: none;
+  margin: 15px auto;
+  width: 30%;
+  border: none;
+  border-bottom: 0.5px solid rgba(194, 178, 178, 0.4);
+}
+
+.signup-container input[name="reg-username"]:focus {
+  outline: none;
+}
+
+.signup-container input[name="reg-password"]:focus {
+  outline: none;
+}
+
+.signup-container input[name="firstName"]:focus {
+  outline: none;
+}
+
+.btnsign {
+  text-align: center;
+  font-weight: lighter;
+  display: block;
+  margin: 0 auto 60px auto;
+  width: 130px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ff416c;
+  cursor: pointer;
+  transition: all 0.55s ease-in;
+}
+
+.signup-form button {
+  display: block;
+  border-radius: 111px;
+  border: 1px solid;
+  text-align: center;
+  width: 100px;
+  padding: 10px 20px;
+  margin: 60px auto 100px auto;
+  background: none;
+  color: #3216cf;
+}
+
+/*             Javascript Toggling              */
+
+.show-overlay {
+  opacity: 1;
+  top: 90px;
+}
+
+.enlarge-text {
+  font-size: 28px;
+  color: #3216cf;
+}
+
+.minimize-text {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 850px) {
+  .main-section {
+    width: 0%;
+  }
+  .login-section {
+    width: 100%;
+    background-image: url("loginbg.png");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+  .signup-container {
+    width: 100%;
+    left: 0;
+    border-radius: 40px;
+    top: 87%;
+  }
+  .show-overlay {
+    opacity: 1;
+    top: 15%;
+  }
+  .signup-container input[name="reg-username"],
+  input[name="reg-password"],
+  input[name="firstName"] {
+    width: 80%;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/main.js" defer></script>
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-section" id="main">
+        <div class="main-text">
+          <h1 class="slogan">Innovate. Inform. Inspire.</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perspiciatis officia, autem doloremque dicta enim eum.
+          </p>
+        </div>
+      </div>
+      <div class="login-section">
+        <div class="form-container">
+          <button id="hideSignUp" class="btnlogin">Login</button>
+          <form action="/home.html" class="login-container" id="login">
+            <input
+              type="text"
+              name="username"
+              id="logUser"
+              autocomplete="off"
+              placeholder="Username"
+              required
+            />
+            <p class="error1" id="error1">Invalid Username/Password!</p>
+            <input
+              type="password"
+              name="password"
+              id="logPass"
+              placeholder="Password"
+              required
+              spellcheck="false"
+            />
+            <p class="error2" id="error2">Wrong Password!</p>
+            <button id="">SIGN IN</button>
+          </form>
+          <div class="signup-container">
+            <button id="showSignUp" class="btnsign">Sign Up</button>
+            <form action="" class="signup-form" id="register">
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                spellcheck="false"
+                placeholder="Name"
+              />
+              <input
+                type="text"
+                name="reg-username"
+                autocomplete="off"
+                id="regUser"
+                placeholder="Username"
+                spellcheck="false"
+                required
+              />
+
+              <input
+                type="password"
+                name="reg-password"
+                placeholder="Password"
+                id="regPass"
+                autocomplete=""
+                required
+              />
+              <button>Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
